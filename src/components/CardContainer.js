@@ -21,7 +21,7 @@ const CardContainer = () => {
 
   const indexOfLastPost = currentPage * postPerPage
   const indexOfFirstPost = indexOfLastPost - postPerPage
-  const currentPost =  data.slice(indexOfFirstPost, indexOfLastPost) 
+  const currentPost = data ? data.slice(indexOfFirstPost, indexOfLastPost) : data  
 
   const pageChange = (val) => {
     setCurrentPage(val)
